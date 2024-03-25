@@ -1,0 +1,10 @@
+{
+    "osfdigital.wingman.enhancedSupport": {
+        "modes": [
+            {
+                "path": "**/*.go",
+                "mode": "Default"
+            }
+        ]
+    }
+}
