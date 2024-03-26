@@ -6,5 +6,11 @@
                 "mode": "Default"
             }
         ]
+    },
+    "osfdigital.wingman.workspaceIndexingSettings": {
+        "indexingState": 4,
+        "indexedWorkspaceId": "f5aea2e1a1ac9e6128c8c43c80388bb3ec0d5e47e0dd45fe7e4d75576f55d282",
+        "uploadedFiles": 6,
+        "indexingId": "9a39d060df0f4c12e4b979fbbe4ce938e9d39659a44675b63d788feb8e80ca6d"
     }
 }

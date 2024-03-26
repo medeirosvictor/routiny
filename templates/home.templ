@@ -1,13 +1,19 @@
 package templates
 
-import "github.com/medeirosvictor/routiny/templates/components"
+import (
+    "github.com/medeirosvictor/routiny/templates/components"
+    "github.com/medeirosvictor/routiny/dto"
+)
 
-templ Home() {
+templ Home(tasks []*dto.TaskDto) {
     @Layout() {
-		<section class="flex flex-col justify-center max-w-[720px] h-[100vh]">
-			Welcome to a small habit tracker
-
+		<section class="flex flex-col justify-center max-w-[720px] max-h-[100vh]">
+            
             @components.AddTaskForm()
+
+            <section class="text-xl">
+                @components.TasksList(tasks)
+            </section>
 		</section>
 	}
 }

@@ -10,7 +10,10 @@ import "context"
 import "io"
 import "bytes"
 
-import "github.com/medeirosvictor/routiny/templates/common"
+import (
+	"github.com/medeirosvictor/routiny/templates/common"
+	"github.com/medeirosvictor/routiny/templates/components"
+)
 
 func Layout() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
@@ -25,7 +28,7 @@ func Layout() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><script src=\"/static/js/htmx.min.js\"></script><link rel=\"stylesheet\" href=\"/static/css/output.css\"><title>Routiny</title></head><body><header class=\"flex justify-center\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><script src=\"/static/js/htmx.min.js\"></script><link rel=\"stylesheet\" href=\"/static/css/output.css\"><title>Routiny</title></head><body><header class=\"flex flex-col items-center justify-center\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -33,7 +36,11 @@ func Layout() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</header><main class=\"flex flex-col justify-center items-center gap-5\">")
+		templ_7745c5c3_Err = components.Clock().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</header><main class=\"flex flex-col justify-center items-center\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

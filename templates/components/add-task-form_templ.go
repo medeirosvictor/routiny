@@ -23,7 +23,7 @@ func AddTaskForm() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<form><input type=\"text\" name=\"task\" placeholder=\"Task name\"> <input type=\"submit\" value=\"Add task\"></form>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<form hx-post=\"/add-task\" hx-target=\"#tasks-list\" hx-swap=\"beforeend\" name=\"add-task-form\" class=\"flex mb-5 gap-2\"><input class=\"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline\" type=\"text\" name=\"task\" placeholder=\"Task name\" required> <button class=\"bg-[#b09078] text-white font-bold py-3 rounded-md w-[110px] h-[50px] text-sm uppercase\" type=\"submit\">Add task</button></form>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -1,6 +1,9 @@
 package templates
 
-import "github.com/medeirosvictor/routiny/templates/common"
+import (
+    "github.com/medeirosvictor/routiny/templates/common"
+    "github.com/medeirosvictor/routiny/templates/components"
+)
 
 templ Layout() {
 	<!DOCTYPE html>
@@ -13,10 +16,11 @@ templ Layout() {
 			<title>Routiny</title>
 		</head>
 		<body>
-			<header class="flex justify-center">
+			<header class="flex flex-col items-center justify-center">
 				@common.Header()
+                @components.Clock()
 			</header>
-			<main class="flex flex-col justify-center items-center gap-5">
+			<main class="flex flex-col justify-center items-center">
 				{ children... }
 			</main>
 		</body>

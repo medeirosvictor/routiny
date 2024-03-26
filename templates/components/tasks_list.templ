@@ -1,0 +1,11 @@
+package components
+
+import "github.com/medeirosvictor/routiny/dto"
+
+templ TasksList(tasks []*dto.TaskDto) {
+    <div id="tasks-list">
+        for _, task := range tasks {
+            @TaskTile(dto.TaskDto{ID: task.ID, Text: task.Text, Done: task.Done})
+        }
+    </div>
+}

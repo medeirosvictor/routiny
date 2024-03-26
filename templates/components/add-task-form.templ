@@ -1,8 +1,10 @@
 package components
 
 templ AddTaskForm() {
-    <form>
-        <input type="text" name="task" placeholder="Task name" />
-        <input type="submit" value="Add task" />
+    <form hx-post="/add-task" hx-target="#tasks-list" hx-swap="beforeend" name="add-task-form" class="flex mb-5 gap-2">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="task" placeholder="Task name" required/>
+        <button 
+            class="bg-[#b09078] text-white font-bold py-3 rounded-md w-[110px] h-[50px] text-sm uppercase" 
+            type="submit">Add task</button>
     </form>
 }
