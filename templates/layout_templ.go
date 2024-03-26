@@ -12,7 +12,6 @@ import "bytes"
 
 import (
 	"github.com/medeirosvictor/routiny/templates/common"
-	"github.com/medeirosvictor/routiny/templates/components"
 )
 
 func Layout() templ.Component {
@@ -33,10 +32,6 @@ func Layout() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		templ_7745c5c3_Err = common.Header().Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = components.Clock().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

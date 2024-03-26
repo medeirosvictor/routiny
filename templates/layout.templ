@@ -2,7 +2,6 @@ package templates
 
 import (
     "github.com/medeirosvictor/routiny/templates/common"
-    "github.com/medeirosvictor/routiny/templates/components"
 )
 
 templ Layout() {
@@ -18,7 +17,6 @@ templ Layout() {
 		<body>
 			<header class="flex flex-col items-center justify-center">
 				@common.Header()
-                @components.Clock()
 			</header>
 			<main class="flex flex-col justify-center items-center">
 				{ children... }
