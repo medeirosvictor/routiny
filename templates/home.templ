@@ -1,6 +1,13 @@
 package templates
 
+import "github.com/medeirosvictor/routiny/templates/components"
+
 templ Home() {
-    <h1>Welcome to my website!</h1>
-    <p>Here you will find all the information you need about me.</p>
+    @Layout() {
+		<section class="flex flex-col justify-center max-w-[720px] h-[100vh]">
+			Welcome to a small habit tracker
+
+            @components.addTaskForm()
+		</section>
+	}
 }

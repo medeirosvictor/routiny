@@ -5,7 +5,6 @@ go 1.22.1
 require (
 	github.com/a-h/templ v0.2.648
 	github.com/labstack/echo/v4 v4.11.4
-	github.com/medeirosvictor/rollover v0.0.0-20240324204256-683c3a84392f
 )
 
 require (
